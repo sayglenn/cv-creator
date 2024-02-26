@@ -1,10 +1,17 @@
-import { useState } from 'react'
-import '../styles/App.css'
+import PersonalDetails from './PersonalDetails';
 
 function App() {
   return (
-    <p>Hello World!</p>
+    <div id="container">
+      <div id="forms">
+        <p id="header-text">CV Builder</p>
+        <PersonalDetails />
+      </div>
+      <div id="resume-display">
+
+      </div>
+    </div>
   )
 }
 
-export default App
+export default App;
