@@ -38,7 +38,8 @@ body {
 
 #personal-form-container > h2,
 #skills-form-container > h2,
-#experience-form-container > h2 #education-form-container > h2 {
+#experience-form-container > h2,
+#education-form-container > h2 {
   text-decoration: underline;
   font-size: 24px;
   margin-top: 0;
