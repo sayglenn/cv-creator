@@ -11,7 +11,7 @@ export function Experience({
       <h2>Experience:</h2>
       {experience.length > 0 ? (
         experience.map((exp) => (
-          <div key={exp.id} className="">
+          <div key={exp.id}>
             <form id="personal-form">
               <label htmlFor="company">Company:</label>
               <input

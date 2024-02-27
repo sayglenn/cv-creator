@@ -3,7 +3,7 @@ import { PersonalDetails, DisplayPersonalDetails } from "./PersonalDetails";
 import { Skills, DisplaySkills } from "./Skills";
 import { Experience, DisplayExperience } from "./Experience";
 import { v4 as uuid } from "uuid";
-import { Education } from "./Education";
+import { Education, DisplayEducation } from "./Education";
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState({
@@ -17,17 +17,7 @@ function App() {
 
   const [experience, setExperience] = useState([]);
 
-  const [education, setEducation] = useState([
-    {
-      id: uuid(),
-      institute: "National University of Singapore",
-      qualification: "Bachelor of Computing in Computer Science (Honours)",
-      start: "Aug 2023",
-      end: "Aug 2027",
-      description:
-        "Relevant Coursework: Object-Oriented Programming, Functional Programming",
-    },
-  ]);
+  const [education, setEducation] = useState([]);
 
   const handlePersonalInfo = (field, value) => {
     setPersonalInfo((info) => ({ ...info, [field]: value }));
@@ -143,6 +133,7 @@ function App() {
           <DisplayPersonalDetails personalInfo={personalInfo} />
           <DisplaySkills skills={skills} />
           <DisplayExperience experience={experience} />
+          <DisplayEducation education={education} />
         </div>
       </div>
     </div>
