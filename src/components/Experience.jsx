@@ -22,6 +22,15 @@ export function Experience({
                   onExperienceInfoChange(exp.id, "company", e.target.value)
                 }
               />
+              <label htmlFor="location">Location:</label>
+              <input
+                type="text"
+                id="location"
+                value={exp.location}
+                onChange={(e) =>
+                  onExperienceInfoChange(exp.id, "location", e.target.value)
+                }
+              />
               <label htmlFor="position">Position:</label>
               <input
                 type="text"
@@ -84,7 +93,7 @@ export function DisplayExperience({ experience }) {
       {experience.map((exp) => (
         <div key={exp.id} className="experience-container">
           <div className="each-exp-header">
-            <h2>{exp.company}</h2>
+            {exp.location == "" ? <h2>{exp.company}</h2> : <h2>{exp.company} | {exp.location}</h2>}
             <h3>
               {exp.start} - {exp.end}
             </h3>

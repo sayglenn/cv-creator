@@ -47,6 +47,7 @@ function App() {
     const newExperienceObject = {
       id: uuid(),
       company: "",
+      location: "",
       position: "",
       start: "",
       end: "",
